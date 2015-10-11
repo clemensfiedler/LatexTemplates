@@ -1,0 +1,74 @@
+\documentclass[a4paper, 11pt]{article}
+
+%===================Packages=====================%
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{graphicx}
+\usepackage{subfig}
+
+\usepackage[pdftex,
+pdfauthor={#Author},
+pdftitle={#Title}]{hyperref}
+
+\usepackage[round]{natbib}
+\usepackage[nottoc]{tocbibind}
+
+\usepackage{enumerate} %better control over enumerate/itemize
+\usepackage{listings}
+
+%\usepackage{tikz}
+%\usetikzlibrary{calc}
+
+%\setlength{\parindent}{0pt}
+
+%-------------------------------------------------------------
+%Section Naming
+%\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+%\renewcommand{\thesubsubsection}{\thesection.\alph{subsection}.\roman{subsubsection}}
+
+%-------------------------------------------------------------
+%Graphics
+%\usepackage{pgfplots}
+%\pgfplotsset{compat=1.9}
+
+%-------------------------------------------------------------
+%General Mathematics
+%\renewcommand{\d}{\text{d}}
+
+%------------------------------------------------------------
+%theorem
+%\newtheorem{name}{text}
+%\newtheorem{exmp}{Example}
+%\newtheorem{assump}{Assumption}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{lemma}{Lemma}
+
+%-------------------------------------------------------------
+%Probability Theory
+%\DeclareMathOperator*{\plim}{plim}
+%\DeclareMathOperator{\sign}{sign}
+
+
+%-------------------------------------------------------------
+%Miscellaneous Packages
+%\usepackage{listings} %code in Latex
+
+%-------------------------------------------------------------
+% Page Layout
+%\usepackage[a4paper, top=2cm, bottom=2cm, left=1.5cm, right=5cm, marginparwidth=4cm]{geometry}	%For working paper
+%\usepackage[a4paper, left=1.5cm, right=5cm, marginparwidth=3cm]{geometry}
+%better margin control
+% Geometry: margin, left, right
+
+\author{#Author}
+\title{#Title}
+
+\begin{document}
+	
+\maketitle
+
+\end{document}
