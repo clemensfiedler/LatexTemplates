@@ -3,22 +3,26 @@
 %===================Packages=====================%
 \usepackage[utf8]{inputenc}
 
+% Mathematics packages
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 
+%Better control for graphics and figures
 \usepackage{graphicx}
 \usepackage{subfig}
 
 \usepackage[pdftex,
 pdfauthor={#Author},
-pdftitle={#Title}]{hyperref}
+pdftitle={#Title}]{hyperref} %hyperref package, adds author and title to meta info
 
-\usepackage[round]{natbib}
+\usepackage[round]{natbib} %NatBib for citations
+\bibliography{plainnat}
+
 \usepackage[nottoc]{tocbibind}
 
-\usepackage{enumerate} %better control over enumerate/itemize
-\usepackage{listings}
+\usepackage{enumerate} 	% Better control over enumerate/itemize
+\usepackage{listings}  	% Print code in Latex
 
 %\usepackage{tikz}
 %\usetikzlibrary{calc}
@@ -61,7 +65,7 @@ pdftitle={#Title}]{hyperref}
 % Page Layout
 %\usepackage[a4paper, top=2cm, bottom=2cm, left=1.5cm, right=5cm, marginparwidth=4cm]{geometry}	%For working paper
 %\usepackage[a4paper, left=1.5cm, right=5cm, marginparwidth=3cm]{geometry}
-%better margin control
+% better margin control
 % Geometry: margin, left, right
 
 \author{#Author}
