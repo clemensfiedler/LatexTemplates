@@ -1,17 +1,43 @@
 \documentclass[aspectratio=1612]{beamer}
 % aspectration = 1612,1610,169
 
-% ----- THEME ------ %
-\usetheme{Malmoe}
+%\usefonttheme[onlymath]{serif} % uses a serif font for formulas, just like in paper
 
-% ----- Plugins ---- %
+% -----   THEME   ------ %
+% for more themes see https://en.wikibooks.org/wiki/LaTeX/Presentations#Style
+\usetheme{Malmoe}
+\usecolortheme{dolphin}
+
+
+% -----   Plugins   ---- %
 \usepackage{enumerate} %for better itemize, enumerate
 
-% General Information
-\title[#Short Title]{\huge #Long Title}
-\author[Clemens Fiedler]{\Large Clemens Fiedler}
-\institute{\normalsize Tilburg University}
-\date{\today}
+\usepackage{dsfont} % ????
 
+\usepackage[round]{natbib}
+\bibliographystyle{plainnat}
+
+% ----- Definitions  ---- %
+\renewcommand{\d}{\text{d}}
+
+% ----- General Info ---- %
+\title[#Short Title]{\huge #Long Title} %default size is \LARGE
+\subtitle{#Subtitle}
+\author[Clemens Fiedler]{\Large Clemens Fiedler}
+\institute[Tilburg]{Tilburg University}
+\date[\today]{\today}
+
+
+% ----- presentation ---- %
+\begin{document}
+	\begin{frame}[plain]  %ommits top and bottom bars on title page
+		\titlepage
+	\end{frame}
+
+	\begin{frame}
+		\tableofcontents
+	\end{frame}
+
+% -----  examples  ---- %
 
 
