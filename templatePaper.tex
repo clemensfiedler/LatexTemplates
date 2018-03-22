@@ -7,6 +7,8 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+% dsfont allows more double stroked characters (numbers)
+%\usepackage{dsfont} 
 
 % Better control for graphics and figures
 \usepackage{graphicx}
@@ -15,7 +17,7 @@
 % hyperref package, adds author and title to meta data
 \usepackage[pdftex,
 pdfauthor={Clemens Fiedler (UvT)},
-pdftitle={Titel}]{hyperref} 
+pdftitle={(Title)}]{hyperref} 
 
 \usepackage[round]{natbib} %NatBib for citations
 \bibliographystyle{plainnat}
@@ -26,7 +28,7 @@ pdftitle={Titel}]{hyperref}
 \usepackage{booktabs}   % Better tables
 \usepackage{listings}  	% Print code in Latex
 
-% drawing graphs
+% tikz for drawing graphs, most of the time not practical
 %\usepackage{tikz}
 %\usetikzlibrary{calc}
 
@@ -44,7 +46,7 @@ pdftitle={Titel}]{hyperref}
 
 %-------------------------------------------------------------
 %General Mathematics
-\renewcommand{\d}{\text{d}}
+\renewcommand{\d}{\text{d}} % for derivatives
 
 %------------------------------------------------------------
 %theorem
@@ -56,14 +58,16 @@ pdftitle={Titel}]{hyperref}
 %\newtheorem{lemma}{Lemma}
 
 %-------------------------------------------------------------
-%Probability Theory
+% Probability Theory
+%-------------------------------------------------------------
 %\DeclareMathOperator*{\plim}{plim}
 %\DeclareMathOperator{\sign}{sign}
 %\newcommand{\expect}[1]{\marginpar{\mathbb{E}\left(#1\right)} }
 
 
 %-------------------------------------------------------------
-%Miscellaneous Packages
+% Miscellaneous Packages
+%-------------------------------------------------------------
 %\usepackage{listings} %code in Latex
 
 %-------------------------------------------------------------
@@ -80,11 +84,16 @@ pdftitle={Titel}]{hyperref}
 %-------------------------------------------------------------
 \newcommand{\note}[1]{\marginpar{\footnotesize #1} }
 
+%-------------------------------------------------------------
+% Document Information
+%-------------------------------------------------------------
 \author{\textsc{Clemens Fiedler}\thanks{CentER, TILEC, Tilburg University, P.O. Box 90153, 5000 LE Tilburg, The Netherlands; \href{mailto:c.fiedler@tilburguniversity.edu}{c.fiedler@tilburguniversity.edu}}\\
 	Tilburg University, CentER, TILEC}
+\title{(Title)}
 
-\title{Title}
-
+%-------------------------------------------------------------
+% Document 
+%-------------------------------------------------------------
 \begin{document}
 	
 \maketitle
@@ -93,9 +102,17 @@ pdftitle={Titel}]{hyperref}
 	Abstract
 \end{abstract}
 
+\hspace{4cm}\\
+\noindent\textsc{Keywords:} (keywords)\\
+\noindent\textsc{JEL Classification:} (JEL Codes)
+
+\newpage
 \tableofcontents
+
+\newpage
 \listoffigures
 
+\newpage
 \section{Examples}\label{sec:examples}
 
 Normal text, \textbf{bold}, \textit{italic}, \textsc{small caps}, \texttt{typewriter} or ,\emph{emphasized}. \note{side note}
