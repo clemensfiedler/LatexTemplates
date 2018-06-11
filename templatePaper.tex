@@ -1,14 +1,16 @@
 \documentclass[a4paper, 11pt]{article}
+%=============================================================
+% Packages
+%=============================================================
+	\usepackage[utf8]{inputenc}
 
-%===================Packages=====================%
-\usepackage[utf8]{inputenc}
-
-% Mathematics packages
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-% dsfont allows more double stroked characters (numbers)
-%\usepackage{dsfont} 
+%-------------------------------------------------------------
+% Mathematics
+%-------------------------------------------------------------
+	\usepackage{amsmath}
+	\usepackage{amsfonts}
+	\usepackage{amssymb}
+	%\usepackage{dsfont} % dsfont allows more double stroked characters (numbers)
 
 % Better control for graphics and figures
 \usepackage{graphicx}
@@ -45,27 +47,6 @@ pdftitle={(Title)}]{hyperref}
 %\pgfplotsset{compat=1.9}
 
 %-------------------------------------------------------------
-%General Mathematics
-\renewcommand{\d}{\text{d}} % for derivatives
-
-%------------------------------------------------------------
-%theorem
-%\newtheorem{name}{text}
-%\newtheorem{exmp}{Example}
-%\newtheorem{assump}{Assumption}
-%\newtheorem{theorem}{Theorem}
-%\newtheorem{prop}{Proposition}
-%\newtheorem{lemma}{Lemma}
-
-%-------------------------------------------------------------
-% Probability Theory
-%-------------------------------------------------------------
-%\DeclareMathOperator*{\plim}{plim}
-%\DeclareMathOperator{\sign}{sign}
-%\newcommand{\expect}[1]{\marginpar{\mathbb{E}\left(#1\right)} }
-
-
-%-------------------------------------------------------------
 % Miscellaneous Packages
 %-------------------------------------------------------------
 %\usepackage{listings} %code in Latex
@@ -78,11 +59,30 @@ pdftitle={(Title)}]{hyperref}
 % better margin control
 % Geometry: margin, left, right
 
+%=============================================================
+% Overides
+%=============================================================
+
+%-------------------------------------------------------------
+% Mathematics
+%-------------------------------------------------------------
+	\renewcommand{\d}{\text{d}}
+	%\DeclareMathOperator*{\plim}{plim}
+	%\DeclareMathOperator{\sign}{sign}
+	
+	% Theorems
+	%---------------------------------------------------------
+	%\newtheorem{name}{text}
+	\newtheorem{exmp}{Example}
+	\newtheorem{assump}{Assumption}
+	\newtheorem{theorem}{Theorem}
+	\newtheorem{lemma}{Lemma}
+	\newtheorem{prop}{Proposition}
 
 %-------------------------------------------------------------
 % Editing
 %-------------------------------------------------------------
-\newcommand{\note}[1]{\marginpar{\footnotesize #1} }
+	\newcommand{\note}[1]{\marginpar{\footnotesize #1} }
 
 %-------------------------------------------------------------
 % Document Information
