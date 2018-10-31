@@ -272,6 +272,16 @@ $if(pagestyle)$
 \pagestyle{$pagestyle$}
 $endif$
 
+$if(beamer)$
+% Change default symbol for itemize
+\setbeamertemplate{itemize item}[square]
+\setbeamertemplate{itemize subitem}[square]
+\setbeamertemplate{itemize subsubitem}[square]
+\setbeamertemplate{enumerate item}[square]
+\setbeamertemplate{enumerate subitem}[square]
+\setbeamertemplate{enumerate subsubitem}[square]
+$endif$
+
 % set default figure placement to htbp
 \makeatletter
 \def\fps@figure{htbp}
@@ -333,7 +343,11 @@ $if(institute)$
 \providecommand{\institute}[1]{}
 \institute{$for(institute)$$institute$$sep$ \and $endfor$}
 $endif$
+$if(shortdate)$
+\date[$shortdate$]{$date$}
+$else$
 \date{$date$}
+$endif$
 $if(beamer)$
 $if(titlegraphic)$
 \titlegraphic{\includegraphics{$titlegraphic$}}
