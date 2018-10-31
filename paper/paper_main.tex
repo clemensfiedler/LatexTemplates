@@ -1,66 +1,61 @@
 \documentclass[a4paper, 11pt]{article}
+
 %=============================================================
 % Packages
 %=============================================================
-	\usepackage[utf8]{inputenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage[pdftex,
+    pdfauthor={Clemens Fiedler (UvT)},
+    pdftitle={(Title)}]{hyperref}
+
+		%-------------------------------------------------------------
+		% Mathematics
+		%-------------------------------------------------------------
+			\usepackage{amsmath}
+			\usepackage{amsfonts}
+			\usepackage{amssymb}
+			\usepackage{amsthm}
+			\usepackage{dsfont}
 
 %-------------------------------------------------------------
-% Mathematics
+% Graphics and Figures
 %-------------------------------------------------------------
-	\usepackage{amsmath}
-	\usepackage{amsfonts}
-	\usepackage{amssymb}
-	%\usepackage{dsfont} % dsfont allows more double stroked characters (numbers)
+	\usepackage{graphicx}
+	\usepackage{subcaption}
+%	\usepackage{pgfplots}   % Plot directly in Latex
+%	\pgfplotsset{compat=1.9}
+%	\usepackage{tikz}
+%	\usetikzlibrary{calc}
 
-% Better control for graphics and figures
-\usepackage{graphicx}
-\usepackage{subcaption}
-
-% hyperref package, adds author and title to meta data
-\usepackage[pdftex,
-pdfauthor={Clemens Fiedler (UvT)},
-pdftitle={(Title)}]{hyperref} 
-
-\usepackage[round]{natbib} %NatBib for citations
-\bibliographystyle{plainnat}
-
-\usepackage[nottoc]{tocbibind}
-
-\usepackage{enumitem} 	% Better control over enumerate/itemize
-\usepackage{booktabs}   % Better tables
-\usepackage{listings}  	% Print code in Latex
-
-% tikz for drawing graphs, most of the time not practical
-%\usepackage{tikz}
-%\usetikzlibrary{calc}
-
-%\setlength{\parindent}{0pt}
 
 %-------------------------------------------------------------
-%Section Naming
-%\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
-%\renewcommand{\thesubsubsection}{\thesection.\alph{subsection}.\roman{subsubsection}}
+% Bibliography
+%-------------------------------------------------------------
+	\usepackage[round]{natbib} %NatBib for citations
+	\bibliographystyle{plainnat}
+	\usepackage{cleveref}
+	\usepackage[nottoc]{tocbibind}  %adds bibliography to table of contents
 
 %-------------------------------------------------------------
-%Graphics
-%\usepackage{pgfplots}
-%\pgfplotsset{compat=1.9}
-
+% Misc
 %-------------------------------------------------------------
-% Miscellaneous Packages
-%-------------------------------------------------------------
-%\usepackage{listings} %code in Latex
+	\usepackage{enumitem} 	% Better control over enumerate/itemize
+	\usepackage{listings}  	% Print code in Latex
+	\usepackage{booktabs}   % Better tables
 
 %-------------------------------------------------------------
 % Page Layout
 %-------------------------------------------------------------
-%\usepackage[a4paper, top=2cm, bottom=2cm, left=1.5cm, right=5cm, marginparwidth=4cm]{geometry}
-%\usepackage[a4paper, left=1.5cm, right=5cm, marginparwidth=3cm]{geometry}
-% better margin control
-% Geometry: margin, left, right
+	\usepackage[a4paper, left=2cm, right=2cm]{geometry}
+%	\usepackage[a4paper, top=2cm, bottom=2cm, left=1.5cm, right=5cm, marginparwidth=4cm]{geometry}
+% 	Geometry: margin, left, right
+%	\setlength{\parindent}{0pt}
+%	\usepackage{setspace}
+%	\doublespacing
+
 
 %=============================================================
-% Overides
+% Overrides
 %=============================================================
 
 %-------------------------------------------------------------
@@ -69,7 +64,7 @@ pdftitle={(Title)}]{hyperref}
 	\renewcommand{\d}{\text{d}}
 	%\DeclareMathOperator*{\plim}{plim}
 	%\DeclareMathOperator{\sign}{sign}
-	
+
 	% Theorems
 	%---------------------------------------------------------
 	%\newtheorem{name}{text}
@@ -80,47 +75,47 @@ pdftitle={(Title)}]{hyperref}
 	\newtheorem{prop}{Proposition}
 
 %-------------------------------------------------------------
-% Editing
+% Section Naming
 %-------------------------------------------------------------
-	\newcommand{\note}[1]{\marginpar{\footnotesize #1} }
+%	\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+%	\renewcommand{\thesubsubsection}{\thesection.\alph{subsection}.\roman{subsubsection}}
 
-%-------------------------------------------------------------
-% Document Information
-%-------------------------------------------------------------
+
+%=============================================================
+% Document
+%=============================================================
+
 \author{\textsc{Clemens Fiedler}\thanks{CentER, TILEC, Tilburg University, P.O. Box 90153, 5000 LE Tilburg, The Netherlands; \href{mailto:c.fiedler@tilburguniversity.edu}{c.fiedler@tilburguniversity.edu}}\\
 	Tilburg University, CentER, TILEC}
-\title{(Title)}
 
-%-------------------------------------------------------------
-% Document 
-%-------------------------------------------------------------
+\title{\textsc{<<TITLE>>}\\
+	\textit{\large <<COMMENT>>}}
+
 \begin{document}
-	
-\maketitle
 
-\begin{abstract}
-	Abstract
-\end{abstract}
+	\maketitle
 
-\hspace{4cm}\\
-\noindent\textsc{Keywords:} (keywords)\\
-\noindent\textsc{JEL Classification:} (JEL Codes)
+	\begin{abstract}
+		Abstract
+	\end{abstract}
 
-\newpage
-\tableofcontents
+	\hspace{4cm}\\
+	\noindent\textsc{Keywords:} (keywords)\\
+	\noindent\textsc{JEL Classification:} (JEL Codes)
 
-\newpage
-\listoffigures
+	\newpage
+	% Input all sctions as separate tex files
+	% \input{paper/introduction}
 
-\newpage
-\section{Examples}\label{sec:examples}
 
-Normal text, \textbf{bold}, \textit{italic}, \textsc{small caps}, \texttt{typewriter} or ,\emph{emphasized}. \note{side note}
+	\section{Examples}\label{sec:examples}
 
-\url{http://ec.europa.eu/competition/consumers/web_browsers_choice_en.html}
+		Normal text, \textbf{bold}, \textit{italic}, \textsc{small caps}, \texttt{typewriter} or ,\emph{emphasized}. \note{side note}
 
-\subsection{Formulas}
-Formulas $x+y$, $\mathbb{E}, \mathcal{C}_1, \alpha, \sum_{i=1}^{4}$
+		\url{http://ec.europa.eu/competition/consumers/web_browsers_choice_en.html}
+
+		\subsection{Formulas}
+		Formulas $x+y$, $\mathbb{E}, \mathcal{C}_1, \alpha, \sum_{i=1}^{4}$
 
 \begin{align}
 f(x)&=x_i^2 &square\\
