@@ -1,175 +1,38 @@
 \documentclass[a4paper, 11pt]{article}
 
-%=============================================================
-% Packages
-%=============================================================
-  \usepackage[utf8]{inputenc}
-  \usepackage[pdftex,
-    pdfauthor={Clemens Fiedler (UvT)},
-    pdftitle={(Title)}]{hyperref}
-  \hypersetup{
-  	colorlinks,
-  	linkcolor = {blue!80!black},
-  	urlcolor = {blue!80!black},
-  	citecolor = {blue!80!black}
-  }
+\usepackage[
+  pdftex,
+  pdfauthor={Clemens Fiedler},
+  pdftitle={META TITLE}]{hyperref} %this information is used for the meta information of the pdf file
 
-%-------------------------------------------------------------
-% Mathematics
-%-------------------------------------------------------------
-	\usepackage{amsmath}
-	\usepackage{amsfonts}
-	\usepackage{amssymb}
-	\usepackage{amsthm}
-	\usepackage{dsfont}
-
-%-------------------------------------------------------------
-% Graphics and Figures
-%-------------------------------------------------------------
-	\usepackage{graphicx}
-	\usepackage{subcaption}
-%	\usepackage{pgfplots}   % Plot directly in Latex
-%	\pgfplotsset{compat=1.9}
-%	\usepackage{tikz}
-%	\usetikzlibrary{calc}
-
-
-%-------------------------------------------------------------
-% Bibliography
-%-------------------------------------------------------------
-	\usepackage[round]{natbib} %NatBib for citations
-	\bibliographystyle{plainnat}
-	\usepackage{cleveref}
-	\usepackage[nottoc]{tocbibind}  %adds bibliography to table of contents
-
-%-------------------------------------------------------------
-% Misc
-%-------------------------------------------------------------
-	\usepackage{enumitem} 	% Better control over enumerate/itemize
-	\usepackage{listings}  	% Print code in Latex
-	\usepackage{booktabs}   % Better tables
-
-%-------------------------------------------------------------
-% Page Layout
-%-------------------------------------------------------------
-	\usepackage[a4paper, left=2cm, right=2cm]{geometry}
-%	\usepackage[a4paper, top=2cm, bottom=2cm, left=1.5cm, right=5cm, marginparwidth=4cm]{geometry}
-% 	Geometry: margin, left, right
-%	\setlength{\parindent}{0pt}
-%	\usepackage{setspace}
-%	\doublespacing
-
+\input{paper/preamble}
 
 %=============================================================
-% Overrides
+% basic information
 %=============================================================
 
-%-------------------------------------------------------------
-% Mathematics
-%-------------------------------------------------------------
-	\renewcommand{\d}{\text{d}}
-	%\DeclareMathOperator*{\plim}{plim}
-	%\DeclareMathOperator{\sign}{sign}
+\title{\textsc{Should we Intervene in the Demand of Firms in the Software Market?}}
 
-	% Theorems
-	%---------------------------------------------------------
-	%\newtheorem{name}{text}
-	\newtheorem{exmp}{Example}
-	\newtheorem{assump}{Assumption}
-	\newtheorem{theorem}{Theorem}
-	\newtheorem{lemma}{Lemma}
-	\newtheorem{prop}{Proposition}
+\author{
+  \textsc{Clemens Fiedler}\thanks{
+    CentER, TILEC, Tilburg University, P.O. Box 90153, 5000 LE Tilburg, The Netherlands; \href{mailto:c.fiedler@tilburguniversity.edu}{c.fiedler@tilburguniversity.edu}}\\
+  Tilburg University, CentER, TILEC}
 
-%-------------------------------------------------------------
-% Section Naming
-%-------------------------------------------------------------
-%	\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
-%	\renewcommand{\thesubsubsection}{\thesection.\alph{subsection}.\roman{subsubsection}}
-
+\date{\today}
 
 %=============================================================
-% Document
+% document
 %=============================================================
-
-\author{\textsc{Clemens Fiedler}\thanks{CentER, TILEC, Tilburg University, P.O. Box 90153, 5000 LE Tilburg, The Netherlands; \href{mailto:c.fiedler@tilburguniversity.edu}{c.fiedler@tilburguniversity.edu}}\\
-	Tilburg University, CentER, TILEC}
-
-\title{\textsc{<<TITLE>>}\\
-	\textit{\large <<COMMENT>>}}
 
 \begin{document}
 
-	\maketitle
+  \maketitle
 
-	\begin{abstract}
-		Abstract
-	\end{abstract}
+  \abstract{Lorem}
 
-	\hspace{4cm}\\
-	\noindent\textsc{Keywords:} (keywords)\\
-	\noindent\textsc{JEL Classification:} (JEL Codes)
+  \noindent\textsc{Keywords:} ...\\
+  \noindent\textsc{JEL Classification:} ...
 
-	\newpage
-	% Input all sctions as separate tex files
-	% \input{paper/introduction}
-
-
-	\section{Examples}\label{sec:examples}
-
-		Normal text, \textbf{bold}, \textit{italic}, \textsc{small caps}, \texttt{typewriter} or ,\emph{emphasized}. \note{side note}
-
-		\url{http://ec.europa.eu/competition/consumers/web_browsers_choice_en.html}
-
-		\subsection{Formulas}
-		Formulas $x+y$, $\mathbb{E}, \mathcal{C}_1, \alpha, \sum_{i=1}^{4}$
-
-\begin{align}
-f(x)&=x_i^2 &square\\
-f(x)&=x_i^3 &cube\\
-\frac{a}{b}&=\int_{i}^{4} \d &\text{text}\nonumber
-\end{align}
-
-\begin{align}
-	\begin{split}
-	f(x)&=x\\
-	&+y
-	\end{split}
-\end{align}
-
-\begin{align}
-	f(x)=
-	\begin{cases}
-	5& \text{if } x \geq 5\\
-	x& \text{else}
-	\end{cases}
-\end{align}
-
-
-
-\subsection{itemize}
-
-\begin{itemize}[noitemsep]
-	\item item
-	\item item
-	\begin{itemize}
-		\item subitem
-	\end{itemize}
-\end{itemize}
-
-\begin{enumerate}
-	\item item
-	\item item
-	\begin{enumerate}
-		\item subitem
-	\end{enumerate}
-\end{enumerate}
-
-\subsection{Citations}
-	\textbackslash citet\{.\}:   Jones et al. (1990)
-	\textbackslash citep\{.\}:   (Jones et al., 1990)
-	\textbackslash citealt\{.\}: Jones et al. 1990
-	\textbackslash citealp\{.\}: Jones et al., 1990
-
-\bibliography{literature}
-
+  \newpage
+  
 \end{document}
